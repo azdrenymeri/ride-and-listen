@@ -3,12 +3,14 @@ import react from 'react';
 import PropsTypes from 'prop-types';
 import './SidePanel.css';
 
-import RadioCard from './Radio/RadioCard/RadioCard';
+import CityList from './Radio/CityList/CityList';
+import RadioPlayer from './Radio/RadioPlayer/RadioPlayer';
 
 export default function SidePanel(props: any) {
   return (<div className="SidePanel"> 
     <p className="SidePanel-title">Side Panel</p>
-    <RadioCard />
+    <CityList />
+    <RadioPlayer />
   </div>)
 }
 

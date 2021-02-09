@@ -1,0 +1,22 @@
+
+.City {
+  list-style: none;
+  border-bottom: solid 1px #cecece;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+.City:last-child {
+  border: none;
+}
+
+.City:hover {
+  background-color: gray;
+}
+
+.City:active {
+  background-color: lightslategray;
+}

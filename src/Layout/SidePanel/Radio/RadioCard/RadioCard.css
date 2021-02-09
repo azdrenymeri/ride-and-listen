@@ -1,0 +1,34 @@
+
+
+.RadioCard {
+  border:  solid 1px #cdcdcd;
+  /* border-top: solid 1px #cecece; */
+  /* border-bottom: solid 1px #cecece; */
+  box-sizing: border-box;
+  margin: 0.3rem;
+  opacity: 0.8;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.RadioCard-title {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color:gray;
+}
+
+.RadioCard-body {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-height: 250px;
+
+}
+
+.RadioCard-city-list {
+  list-style: none;
+  padding: 0;
+}

@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Walk and listen
+Inspired by [Walk And Liste](https://driveandlisten.herokuapp.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Listen to worldwide radios.
+
+
 
 ## Available Scripts
 

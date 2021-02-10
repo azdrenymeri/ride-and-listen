@@ -1,14 +1,16 @@
-// eslint-disable-next-line
-import react from 'react';
+import React from 'react';
 import './Layout.css';
+import { useObserver } from 'mobx-react';
+import { useApplicationStore } from './../mobx/Store';
 
 import Signal from './Signal/Signal';
 import SidePanel from './SidePanel/SidePanel';
 import Video from './Video/Video';
 export default function Layout() {
-    return (<main className="Layout">
-        <Video />
-        {/* <Signal message="No Signal" /> */}
+    const store = useApplicationStore();
+
+    return useObserver(() => (<main className="Layout">
+        {store.videoControls.showVideo ? <Video /> : <Signal message="No Signal" /> }    
         <SidePanel title="Walk and Listen" />
-    </main>);
+    </main>));
 }

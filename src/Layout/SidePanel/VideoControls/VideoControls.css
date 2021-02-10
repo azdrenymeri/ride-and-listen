@@ -1,0 +1,24 @@
+
+
+.VideoControls {
+
+}
+
+.VideoControls-button {
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: solid 1px gray;
+  border-radius: 4px;
+  height: 32px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0.3rem
+}
+
+.VideoControls-button:hover {
+  background-color: gray;
+}
+.VideoControls-button:active {
+  background-color: lightslategray;
+}

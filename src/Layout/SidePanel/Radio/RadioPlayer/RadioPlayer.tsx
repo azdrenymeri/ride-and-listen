@@ -5,6 +5,10 @@ export default function RadionPlayer(){
   useEffect(()=> {
     const radio = mainRadio();
     radio.play();
+
+    // return () => {
+    //   radio.stop();
+    // }
   },[])
 
   return (<div>

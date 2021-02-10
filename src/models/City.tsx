@@ -1,15 +1,31 @@
 import RadioStation from './RadioStatio';
 import Video, { Weather, Time } from './Video';
 
-export default class City {
-  name: string;
-  private stations: Array<RadioStation>
-  private videos: Array<Video>
 
-  constructor(name: string, stations: Array<RadioStation>, videos: Array<Video>) {
+interface ICity {
+  getName(): string;
+  getStations(): Array<RadioStation>
+  getVideos(): Array<Video>
+}
+
+
+export default class City implements ICity {
+  constructor(private name: string, private stations: Array<RadioStation>, private videos: Array<Video>) {
     this.name = name;
     this.stations = stations;
     this.videos = videos;
+  }
+
+  getName(): string {
+    return this.name;
+  }
+
+  getStations(): Array<RadioStation> {
+    return this.stations;
+  }
+
+  getVideos(): Array<Video> {
+    return this.videos;
   }
 
   addVideo(video: Video) {

@@ -7,6 +7,5 @@ export default function City(props: any){
 }
 
 City.propTypes = {
-  key: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
 }

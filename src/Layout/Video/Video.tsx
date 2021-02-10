@@ -3,8 +3,10 @@ import './Video.css'
 
 
 export default function Video(props: any): any {
-
-  let source = "https://www.youtube-nocookie.com/embed/7HaJArMDKgI"
+/*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4zcgCx2MjMQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+*/
+  let source = "https://www.youtube-nocookie.com/embed/4zcgCx2MjMQ"
     + "?controls=0&rel=0&disablekb=1&modestbranding=1&showinfo=0&mute=1"
     + "&autoplay=1&enablejsapi=1"
   return (

@@ -1,29 +1,39 @@
 import React from 'react';
 import './Video.css'
+import Youtube from 'react-youtube';
 
+import { useObserver } from 'mobx-react';
+import { useApplicationStore } from '../../mobx/Store';
 
 export default function Video(props: any): any {
-/*
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4zcgCx2MjMQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-*/
-  let source = "https://www.youtube-nocookie.com/embed/4zcgCx2MjMQ"
-    + "?controls=0&rel=0&disablekb=1&modestbranding=1&showinfo=0&mute=1"
-    + "&autoplay=1&enablejsapi=1"
-  return (
-    <div id="vid-container" className="Video-container">
-      <iframe
-        className="Video-player"
-        aria-disabled="true"
-        id="vplayer"
-        width="100%"
-        height="100%"
-        src={source}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-        allowFullScreen
-        onLoad={(e: any) => setupVideo(e)}
-      ></iframe>
-    </div>);
+
+    const store = useApplicationStore();
+
+    const opts = {
+      height:"100%",
+      width: "100%",
+      playerVars: {
+          controls: 0,
+          rel:0,
+          disablekb:1,
+          modestbranding:1,
+          showinfo:0,
+          mute:1,
+          autoplay:1,
+          enablejsapi:1
+      } as any
+    } 
+
+    const _onReady = (event: any) => {
+      store.videoPlayer = event;
+    }
+
+    return (<Youtube 
+      opts={opts} 
+      videoId="4zcgCx2MjMQ"
+      containerClassName="Video-container"
+      className="Video-player" 
+      onReady={(e:any) => _onReady(e)}  />);
 }
 
 

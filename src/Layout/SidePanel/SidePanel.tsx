@@ -12,7 +12,7 @@ export default function SidePanel(props: any) {
     <div className="SidePanel">
       <p className="SidePanel-title">Side Panel</p>
       <CityList />
-      {/* <RadioPlayer /> */}
+      <RadioPlayer />
       <VideoControls />
     </div>
   );

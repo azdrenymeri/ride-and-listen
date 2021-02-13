@@ -1,6 +1,10 @@
 
 export enum Time {
-  Day,Morning,Night
+  SUNRISE,  // lindja djellit
+  MIDDAY,   // mesdite
+  SUNSET,   // perendimi i djellit
+  NIGHT,    // Nata
+  MIDNIGHT, // mesnata
 }
 
 export enum Weather {

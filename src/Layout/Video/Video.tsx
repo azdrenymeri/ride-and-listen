@@ -29,7 +29,7 @@ export default function Video(props: any): any {
     }
 
     return (<Youtube 
-      opts={opts} 
+      opts={opts}   
       videoId="4zcgCx2MjMQ"
       containerClassName="Video-container"
       className="Video-player" 

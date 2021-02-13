@@ -1,9 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 import PropTypes from 'prop-types';
 import './City.css';
+import {useApplicationStore} from './../../../../../mobx/Store';
+import {useObserver} from 'mobx-react';
+
+import {handleClick} from './handleCity';
 
 export default function City(props: any){
-  return<li className="City" key={props.key}> {props.name} </li>
+  const store = useApplicationStore();
+  return useObserver(() => (<li 
+            className={['City'].join(" ")} 
+            key={props.key}
+            onClick={(e) => handleClick(e, store, props.name)}> 
+            {props.name}
+  </li>));
 }
 
 City.propTypes = {

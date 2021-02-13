@@ -1,6 +1,5 @@
-import RadioStation from './RadioStatio';
+import RadioStation from './RadioStation';
 import Video, { Weather, Time } from './Video';
-
 
 interface ICity {
   getName(): string;

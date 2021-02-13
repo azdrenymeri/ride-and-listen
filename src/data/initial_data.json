@@ -1,0 +1,74 @@
+[
+  {
+    "name": "New York City",
+    "stations": [
+      {
+        "name": "Smooth Jazz CD 101.9 New York",
+        "stream_url": "http://hestia2.cdnstream.com/1277_192",
+        "genres": ["smooth_jazz"]
+      }
+    ],
+    "videos": [
+      {
+        "video_url": "-IpXdtWfneI",
+        "time": "MIDDAY",
+        "weather": "SUNNY"
+      },
+      {
+        "video_url": "PEhKhACVfaA",
+        "time": "SUNSET",
+        "weather": "SUNNY"
+      },
+      {
+        "video_url":"FjU_x1106pg",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+    ]
+  },
+  {
+    "name": "Lost Angeles",
+    "stations": [
+      {
+        "name": "NonStopOldies",
+        "stream_url": "http://s18.myradiostream.com:9676/;stream.nsv",
+        "genres": ["50s","40s","70s"]
+      }
+    ],
+    "videos": [
+      {
+        "video_url": "Co8Ljb4RLe4",
+        "time": "MIDDAY",
+        "weather": "SUNNY"
+      }
+    ]
+  },
+
+  {
+    "name": "San Francisco",
+    "stations": [
+      {}
+    ],
+    "videos": []
+  },
+  {
+    "name": "Miami",
+    "stations": [],
+    "videos": []
+  },
+  {
+    "name": "Tampa",
+    "stations": [],
+    "videos": []
+  },
+  {
+    "name": "Roma",
+    "stations": [],
+    "videos": []
+  },
+  {
+    "name": "Zurich",
+    "stations": [],
+    "videos": []
+  }
+]

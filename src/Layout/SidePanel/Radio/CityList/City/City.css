@@ -8,6 +8,10 @@
   padding-bottom: 0.5rem;
 }
 
+.City-active {
+  font-size: 0.8rem;
+  background-color: lightslategray;
+}
 
 .City:last-child {
   border: none;
@@ -18,5 +22,7 @@
 }
 
 .City:active {
-  background-color: lightslategray;
+  background-color: darkslategray;
+  opacity: 0.9;
 }
+

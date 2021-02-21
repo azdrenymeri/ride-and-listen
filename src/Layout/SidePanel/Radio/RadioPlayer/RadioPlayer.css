@@ -1,0 +1,45 @@
+.RadioPlayer {
+  margin-top: 1rem;
+}
+.RadioPlayer-title {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: gray;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+.RadioPlayer-card {
+  border: solid 1px #cdcdcd;
+  margin: 0.3rem;
+  border-radius: 4px;
+}
+
+.RadioPlayer-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.RadioPlayer-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+  background-color: transparent;
+
+}
+
+.RadioPlayer-icon:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.RadioPlayer-icon:active {
+  background-color: transparent;
+  border-radius: 50%;
+}

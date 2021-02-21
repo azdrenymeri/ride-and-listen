@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Layout.css';
 import { useObserver } from 'mobx-react';
 import { useApplicationStore } from './../mobx/Store';

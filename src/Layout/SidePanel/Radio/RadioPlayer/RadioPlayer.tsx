@@ -1,34 +1,60 @@
-import React, {useEffect} from 'react';
-import ReactHowler from 'react-howler';
+import { useObserver } from 'mobx-react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useApplicationStore } from '../../../../mobx/Store';
+import { icons } from './iconImports';
+import './RadioPlayer.css';
+import {handleVolumeDown, handleTogglePlayPause, handleVolumeUp} from './handleRadioPlayer';
+import { type } from 'os';
 
-import {useObserver} from 'mobx-react';
-import {useApplicationStore} from '../../../../mobx/Store';
-
-export default function RadioPlayer(){
-
+export  default function RadioPlayer() {
   const store = useApplicationStore();
+  const [isPlayerPlaying, setPlaying] = useState(false);
+  const playerRef = useRef<HTMLAudioElement>();
 
-  useEffect(()=> {
-    if (store.radioPlayer != null) {
-      store.radioPlayer.play();
+  useEffect(() => {
+      if(playerRef.current?.isConnected){
+
+        //  chrome does not support autoplay
+        playerRef.current.play().then(() => {
+            setPlaying(true);
+          }).catch((err) => {
+            setPlaying(false);
+          })
+      }
+
+      return () => {
+      playerRef.current?.pause();
     }
-    return () => {
-      store.radioPlayer.unload();
-    }
-  },[])
+  }, [])
 
-  const handleLoadError = (soundId: number) => {
-      console.log("There was an error loading radio");
-  }
-  const handlePlayError = () => {
-      console.log("There was an error playing the radio")
-  }
+  return useObserver(() => (
+    <div className="RadioPlayer">
+      <audio ref={playerRef as any} id="aPlayer" preload="auto" src="https://us4.internet-radio.com/proxy/wsjf?mp=/stream">
+        <source src="https://us4.internet-radio.com/proxy/wsjf?mp=/stream" type="audio/mpeg"></source>
+      </audio>
+      <div className="RadioPlayer-card">
+        <p className="RadioPlayer-title">Radio Player</p> 
+        
+        <button className="RadioPlayer-button">
+          <img src={icons.previousIcon} className="RadioPlayer-icon" />
+        </button>
+        
+        <button className="RadioPlayer-button" onClick={(e: any) => handleVolumeDown(e, playerRef.current as HTMLAudioElement)}>
+          <img src={icons.volumeDownIcon} className="RadioPlayer-icon" />
+        </button>
 
-  return useObserver(() => (<ReactHowler 
-            src="https://us4.internet-radio.com/proxy/wsjf?mp=/stream"
-            format={["mp3", "aac"]}
-            html5={true}
-            ref={(ref:any) => (store.radioPlayer = ref)}
-            onLoadError={(id:number) => {handleLoadError(id)}}
-  />));
+        <button className="RadioPlayer-button" onClick={(e) => handleTogglePlayPause(e, playerRef.current as HTMLAudioElement)}>
+          <img src={icons.playIcon} className="RadioPlayer-icon" />
+        </button>
+        
+        <button className="RadioPlayer-button" onClick={(e) => handleVolumeUp(e, playerRef.current as HTMLAudioElement)}>
+          <img src={icons.volumeUpIcon} className="RadioPlayer-icon" />
+        </button>
+
+        <button className="RadioPlayer-button">
+          <img src={icons.nextIcon} className="RadioPlayer-icon" />
+        </button>
+      </div>
+    </div>));
+
 }

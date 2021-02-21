@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropsTypes from 'prop-types';
 import './SidePanel.css';
 import {useObserver} from 'mobx-react';
 import {useApplicationStore } from './../../mobx/Store';
 
 import CityList from './Radio/CityList/CityList';
+
 import RadioPlayer from './Radio/RadioPlayer/RadioPlayer';
 import VideoControls from './VideoControls/VideoControls';
-import CityDecorator from '../../models/CityDecorator';
 
 
 export default function SidePanel(props: any) {
@@ -20,8 +20,8 @@ export default function SidePanel(props: any) {
       <p className="SidePanel-title">
       {radioIcon} {props.title}
       </p>
-      <CityList citiesList={store.cities} />
-      {/* <RadioPlayer /> */}
+      <CityList />
+      <RadioPlayer />
       <VideoControls />
     </div>
   ));

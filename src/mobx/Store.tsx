@@ -1,5 +1,5 @@
 import React from 'react';
-import {useLocalStore, useObserver} from 'mobx-react';
+import {useLocalStore} from 'mobx-react';
 import storeObject from './storeObj';
 
 const StoreContext = React.createContext<any | undefined>(undefined);

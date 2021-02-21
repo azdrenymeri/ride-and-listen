@@ -36,10 +36,10 @@ export default class City implements ICity {
   }
 
   getVideosByWeatherAndTime(weather: Weather, time: Time) {
-    return this.videos.map((video: Video) => {
-      if (video.weather === weather && video.time === time) {
-        return video;
-      }
-    })
+    // return this.videos.map((video: Video) => {
+    //   if (video.weather === weather && video.time === time) {
+    //     return video;
+    //   }
+    // })
   }
 }

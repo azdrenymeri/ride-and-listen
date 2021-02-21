@@ -11,10 +11,11 @@ import Video from './Video/Video';
 
 export default function Layout() {
     const store = useApplicationStore();
-    store.cities = initialCitiesList();
+    store.cityStore.cities = initialCitiesList();
+    // store.cities = initialCitiesList();
 
     return useObserver(() => (<main className="Layout">
-        {store.videoControls.showVideo ? <Video /> : <Signal message="No Signal" />}
+        {store.uiStore.videoState.showVideo ? <Video /> : <Signal message="No Signal" />}
         <SidePanel title="Walk and Listen" />
     </main>));
 }

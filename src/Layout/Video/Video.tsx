@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './Video.css'
 import Youtube from 'react-youtube';
 import { useApplicationStore } from '../../mobx/Store';
@@ -6,6 +6,11 @@ import { useApplicationStore } from '../../mobx/Store';
 export default function Video(props: any): any {
 
     const store = useApplicationStore();
+    const videoRef = useRef<HTMLIFrameElement>();
+    
+    useEffect(() => {
+      store.uiStore.videoReference = videoRef.current;
+    },[]);
 
     const opts = {
       height:"100%",
@@ -28,10 +33,11 @@ export default function Video(props: any): any {
 
     return (<Youtube 
       opts={opts}   
-      videoId="sxIzO6RXJoU"
+      videoId="n1xkO0_lSU0"
       containerClassName="Video-container"
       className="Video-player" 
-      onReady={(e:any) => _onReady(e)}  />);
+      onReady={(e:any) => _onReady(e)}
+      ref={videoRef as any}  />);
 }
 
 

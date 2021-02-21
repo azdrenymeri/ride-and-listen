@@ -1,13 +1,11 @@
 import React from 'react';
-import {useLocalStore} from 'mobx-react';
-import storeObject from './storeObj';
+import RootStore from '../mobx/stores/RootStore';
 
 const StoreContext = React.createContext<any | undefined>(undefined);
 
 const StoreProvider = ({children}: any) => {  
-  const store = useLocalStore(() => (storeObject()))
   return (
-    <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
+    <StoreContext.Provider value={new RootStore()}>{children}</StoreContext.Provider>
   )
 }
 

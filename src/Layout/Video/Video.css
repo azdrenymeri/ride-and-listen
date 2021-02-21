@@ -98,13 +98,13 @@
   /* big landscape tablets, laptops, and desktops */
   .Video-container {
     position: relative;
-    margin-bottom: -100px;
+    margin-bottom: -90px;
     padding-top: 0;
     overflow: hidden;
     pointer-events: none;
     padding-bottom: 70.25%;
-    height: 70%;
-    width: 250%;
+    height: 30%;
+    width: 200%;
   }
   
   .Video-container iframe,

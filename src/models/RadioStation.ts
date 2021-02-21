@@ -11,7 +11,8 @@ export enum Genre {
   '40s',
   '50s',
   '60s',
-  '70s'
+  '70s',
+  urban
 }
 
 

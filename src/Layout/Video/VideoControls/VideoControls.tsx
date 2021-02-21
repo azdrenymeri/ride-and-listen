@@ -8,7 +8,7 @@ export default function VideoControls() {
   const store = useApplicationStore();
 
   const handleVideoToggle = (event: any, store: any) => {
-    store.videoControls.showVideo = !store.videoControls.showVideo;
+    store.uiStore.videoState.showVideo = !store.uiStore.videoState.showVideo;
   }
 
   const [mute,setMute] = useState(true)
@@ -34,7 +34,7 @@ export default function VideoControls() {
     <button
       className="VideoControls-button"
       onClick={(e) => { handleVideoToggle(e, store) }}
-    > Video &nbsp;<b>{store.videoControls.showVideo ? "ON" : "OFF"} </b>
+    > Video &nbsp;<b>{store.uiStore.videoState.showVideo ? "ON" : "OFF"} </b>
     </button>
   </div>));
 }

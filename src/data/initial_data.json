@@ -6,6 +6,10 @@
         "name": "Smooth Jazz CD 101.9 New York",
         "stream_url": "http://hestia2.cdnstream.com/1277_192",
         "genres": ["smooth_jazz"]
+      },{
+        "name":"Urban Radio (New York)",
+        "stream_url": "https://us5.internet-radio.com/proxy/mdansby?mp=/stream;",
+        "genres": ["urban"]
       }
     ],
     "videos": [
@@ -53,7 +57,13 @@
   },
   {
     "name": "Miami",
-    "stations": [],
+    "stations": [
+      {
+        "name": "Classic Rock Florida HD",
+        "stream_url": "https://us4.internet-radio.com/proxy/douglassinclair?mp=/stream;",
+        "genres": ["rock"]
+      }
+    ],
     "videos": []
   },
   {

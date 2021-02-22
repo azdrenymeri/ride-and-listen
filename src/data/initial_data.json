@@ -41,9 +41,14 @@
     ],
     "videos": [
       {
-        "video_url": "Co8Ljb4RLe4",
+        "video_url": "Cw0d-nqSNE8",
         "time": "MIDDAY",
         "weather": "SUNNY"
+      },
+      {
+        "video_url":"25EgbhdVESE",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
       }
     ]
   },
@@ -64,7 +69,13 @@
         "genres": ["rock"]
       }
     ],
-    "videos": []
+    "videos": [
+      {
+        "video_url":"Cod_ggrs69U",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+    ]
   },
   {
     "name": "Tampa",

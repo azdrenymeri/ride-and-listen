@@ -3,17 +3,14 @@
 export const handleVideoChange = (e: any, videoRef: any, store: any) => {
   let selectedCity = store.uiStore.selectedCity;
   const videoArr = store.cityStore.getcityVideos(selectedCity);
-  const randomIndex = getRandomInt(0, videoArr.length-1);
+  if(videoArr.length <= 0){
+    return;
+  }
 
+  const randomIndex = getRandomInt(0, videoArr.length);
   const randomVidObj = videoArr[randomIndex];
+  store.uiStore.selectedVideoId = randomVidObj.video_url;
 
-  console.log(randomVidObj);
-  videoRef.h.parentElement.classList.add("Video-hidden");
-  videoRef.pauseVideo();
-  videoRef.loadVideoById(randomVidObj.video_url);
-  videoRef.playVideo();
-  // videoRef.contr
-  console.log("inside video reference");
 }
 
 

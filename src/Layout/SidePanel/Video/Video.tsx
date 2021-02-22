@@ -8,7 +8,7 @@ import {observer} from 'mobx-react';
 function Video(props: any): any {
 
     const store = useApplicationStore();
-    
+
     const opts = {
       height:"100%",
       width: "100%",
@@ -25,25 +25,34 @@ function Video(props: any): any {
     } 
 
     const handleChange = (event: any) => {
+      if (event.data === 3) {
+        event.target.setPlaybackQuality('hd1080');
+      }
+
       if (event.data === 1) {
-        event.target.h.parentElement.classList.remove("Video-hidden")
+        store.uiStore.videoContainerReference.classList.remove("Video-hidden")
       } else {
-        event.target.h.parentElement.classList.add("Video-hidden");
+        store.uiStore.videoContainerReference.classList.add("Video-hidden");
       }
     }
 
     const handleReady = (event: any) => {
+      event.target.setPlaybackQuality('hd1080');
       store.uiStore.videoReference = event.target;
+      store.uiStore.videoContainerReference = event.target.h.parentElement; 
     }
     
 
-    return (<Youtube
-      opts={opts}   
-      videoId="n1xkO0_lSU0"
-      containerClassName="Video-container Video-hidden"
-      className="Video-player" 
-      onReady = {handleReady}
-      onStateChange={handleChange}  />);
+    return (
+      <Youtube
+        opts={opts}   
+        videoId={store.uiStore.selectedVideoId}
+        containerClassName="Video-container Video-hidden"
+        className="Video-player" 
+        onReady = {handleReady}
+        onStateChange={handleChange}
+        onError={(e) => console.log(e)}  />
+      );
 }
 
 export default observer(Video);

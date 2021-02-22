@@ -14,12 +14,12 @@ export default function VideoControls() {
   const [mute,setMute] = useState(true)
 
   const handleVoiceToggle = (event: any, store: any) => {
-    if (store.videoPlayer != null) {
-      if (store.videoPlayer.target.isMuted()) {
-        store.videoPlayer.target.unMute();
+    if (store.uiStore.videoReference != null) {
+      if (store.uiStore.videoReference.isMuted()) {
+        store.uiStore.videoReference.unMute();
         setMute(false)
       } else {
-        store.videoPlayer.target.mute();
+        store.uiStore.videoReference.mute();
         setMute(true)
       }
     }

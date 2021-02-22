@@ -11,10 +11,12 @@ export default class UiStore {
   }
   rootStore: RootStore;
   selectedCity: string;
+  selectedVideoId: string;
   selectedRadio: string;
   radioChannelPosition: number;
   audioReference: HTMLAudioElement | null;
   videoReference: HTMLIFrameElement | null;
+
 
   constructor(rootStore: RootStore) {
     makeAutoObservable(this);
@@ -24,5 +26,6 @@ export default class UiStore {
     this.radioChannelPosition = 0;
     this.audioReference = null;
     this.videoReference = null;
+    this.selectedVideoId = 'sRE5iQCdRvE';
   }
 }

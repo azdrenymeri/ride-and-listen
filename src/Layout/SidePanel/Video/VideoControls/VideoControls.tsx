@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './VideoControls.css';
 import { useObserver } from 'mobx-react';
-import { useApplicationStore } from '../../../mobx/Store';
+import { useApplicationStore } from '../../../../mobx/Store';
 
 export default function VideoControls() {
 

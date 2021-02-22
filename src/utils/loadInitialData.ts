@@ -38,7 +38,7 @@ const setVideos = (jsonVideos: any): Array<Video> => {
   const videos: Array<Video> = [];
 
   for (let i = 0; i < jsonVideos.length; i++) {
-    videos.push(new Video(jsonVideos.video_url, Time.MIDDAY, Weather.Rainy));
+    videos.push(new Video(jsonVideos[i].video_url, Time.MIDDAY, Weather.Rainy));
   }
 
   return videos;

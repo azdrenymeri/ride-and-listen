@@ -8,7 +8,7 @@ import CityList from './CityList/CityList';
 
 import Radio from './Radio/Radio';
 // import RadioPlayer from './Radio/RadioPlayer/RadioPlayer';
-import VideoControls from '../Video/VideoControls/VideoControls';
+import VideoControls from './Video/VideoControls/VideoControls';
 
 
 export default function SidePanel(props: any) {

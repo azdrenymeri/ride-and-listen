@@ -27,11 +27,11 @@ function Video(props: any): any {
       if(event.data === 1) {
         event.target.setPlaybackQuality('highres')
       }
-      if (event.data === 1) {
-        store.uiStore.videoContainerReference.classList.remove("Video-hidden")
-      } else {
-        store.uiStore.videoContainerReference.classList.add("Video-hidden");
-      }
+      // if (event.data === 1) {
+      //   store.uiStore.videoContainerReference.classList.remove("Video-hidden")
+      // } else {
+      //   store.uiStore.videoContainerReference.classList.add("Video-hidden");
+      // }
     }
 
     const handleReady = (event: any) => {
@@ -41,9 +41,7 @@ function Video(props: any): any {
     }
 
     const handleQuality = (event: any) => {
-      console.log('handleQuality fired!');
       event.target.setPlaybackQuality('highres')
-
     }
     
 
@@ -51,7 +49,7 @@ function Video(props: any): any {
       <Youtube
         opts={opts}   
         videoId={store.uiStore.selectedVideoId}
-        containerClassName="Video-container Video-hidden"
+        containerClassName="Video-container"
         className="Video-player" 
         onReady = {handleReady}
         onStateChange={handleChange}

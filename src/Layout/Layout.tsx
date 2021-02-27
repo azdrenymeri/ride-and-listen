@@ -12,7 +12,7 @@ import Video from './SidePanel/Video/Video';
 function Layout() {
     const store = useApplicationStore();
     store.cityStore.cities = initialCitiesList();
- 
+
     return (<main className="Layout">
         {store.uiStore.videoState.showVideo ? <Video /> : <Signal message="No Signal" />}
         <SidePanel title="Walk and Listen" />

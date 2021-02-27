@@ -3,6 +3,26 @@
     "name": "New York City",
     "stations": [
       {
+        "name":"106.7 Lite FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc1477",
+        "genres":["pop"]
+      },
+      {
+        "name":"103.5 FM KTU",
+        "stream_url":"http://stream.revma.ihrhls.com/zc1473",
+        "genres":["pop"]
+      },
+      {
+        "name":"100.3 FM - Z100",
+        "stream_url":"http://stream.revma.ihrhls.com/zc1469",
+        "genres":["pop"]
+      },
+      {
+        "name":"Q104.3",
+        "stream_url":"http://stream.revma.ihrhls.com/zc1465",
+        "genre":["pop"]
+      },
+      {
         "name": "Smooth Jazz CD 101.9 New York",
         "stream_url": "http://hestia2.cdnstream.com/1277_192",
         "genres": ["smooth_jazz"]
@@ -34,6 +54,31 @@
     "name": "Lost Angeles",
     "stations": [
       {
+        "name":"Alt 98.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc201",
+        "genres":["pop"]
+      },
+      {
+        "name":"Real 92.3 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc181",
+        "genres":["pop"]
+      },
+      {
+        "name":"KOST 103.5 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc193",
+        "genres":["pop"]
+      },
+      {
+        "name":"104.3 My FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc173",
+        "genres":["pop"]
+      },
+      {
+        "name": "KIIS FM 102.7",
+        "stream_url":"http://stream.revma.ihrhls.com/zc185",
+        "genres":["pop"]
+      },
+      {
         "name": "NonStopOldies",
         "stream_url": "http://s18.myradiostream.com:9676/;stream.nsv",
         "genres": ["50s","40s","70s"]
@@ -56,13 +101,67 @@
   {
     "name": "San Francisco",
     "stations": [
-      {}
+      {
+        "name":"Wild 94.9",
+        "stream_url":"http://stream.revma.ihrhls.com/zc305",
+        "genres": ["pop"]
+      },
+      {
+        "name":"Star 101.3",
+        "stream_url":"http://stream.revma.ihrhls.com/zc281",
+        "genres":["pop"]
+      },
+      {
+        "name":"The Breeze 98.1 FM",
+        "stream_url":"",
+        "genres":["pop"]
+      },
+      {
+        "name":"KMEL 106.1 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc293",
+        "genres":["hip-hop"]
+      },
+      {
+        "name":"KOSF iHeart 80s 103.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc4342",
+        "genres":["80s"]
+      },
+      {
+        "name":"The Bay Area's BIN",
+        "stream_url":"http://stream.revma.ihrhls.com/zc297",
+        "genres":["hip-hop"]
+      },
+      {
+        "name":"Bloomberg Radio",
+        "stream_url":"http://stream.revma.ihrhls.com/zc301",
+        "genres":["hip-hop"]
+      }
     ],
     "videos": []
   },
   {
     "name": "Miami",
     "stations": [
+      {
+        "name":"100.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc561",
+        "genres":["pop"]
+      },
+      {
+        "name":"Totally 93.9",
+        "stream_url":"http://stream.revma.ihrhls.com/zc4243",
+        "genres":["pop"]
+      },
+      {
+        "name":" The Beat 103.5 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc581",
+        "genres":["pop"]
+      },
+      {
+        "name":" Big 105.9 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc557",
+        "genres":["pop"]
+      },
       {
         "name": "Classic Rock Florida HD",
         "stream_url": "https://us4.internet-radio.com/proxy/douglassinclair?mp=/stream;",
@@ -74,22 +173,190 @@
         "video_url":"Cod_ggrs69U",
         "time":"MIDDAY",
         "weather":"SUNNY"
+      },
+      {
+        "video_url":"kj-iwaT8TyY",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"hkutqqjk84M",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
       }
     ]
   },
   {
     "name": "Tampa",
-    "stations": [],
-    "videos": []
+    "stations": [
+      {
+        "name":"93.3 FLZ",
+        "stream_url":"http://stream.revma.ihrhls.com/zc681",
+        "genres":["pop"]
+      },
+      {
+        "name":"Mix 100.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc689",
+        "genres":["pop"]
+      },
+      {
+        "name":"98 Rock",
+        "stream_url":"http://stream.revma.ihrhls.com/zc697",
+        "genres":["rock"]
+      },
+      {
+        "name":"The Beat 95.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc669",
+        "genres":["pop"]
+      },
+      {
+        "name":"Throwback 100.7 FM",
+        "stream_url":"http://stream.revma.ihrhls.com/zc6434",
+        "genres":["pop"]
+      }
+    ],
+    "videos": [
+      {
+        "video_url":"bOHyypHZ1ys",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"eXQwfsvCzeA",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"jamaHJZUTpQ",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+    ]
+  },
+  {
+    "name":"Hamburg",
+    "stations":[
+      {
+        "name":"Radio Hamburg 103.6",
+        "stream_url":"https://rhh.streamabc.net/rhh-rhhlivestream-mp3-192-5434905",
+        "genres":["general"]
+      },
+      {
+        "name":"917XFM",
+        "stream_url":"https://mp3channels.rockantenne.hamburg/917xfm",
+        "genres":["general"]
+      },
+      {
+        "name":"ByteFM",
+        "stream_url":"https://addrad.io/4457xkn",
+        "genres":["general"]
+      },
+      {
+        "name":"Klassik Radio",
+        "stream_url":"http://stream.klassikradio.de/live/mp3-128/www.klassikradio.de/",
+        "genres":["general"]
+      }
+    ],
+    "videos":[
+      {
+        "video_url":"X0R0U3Tw3g8",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"HSdxvxq529w",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"aAVC0yZFsPo",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+    ]
   },
   {
     "name": "Roma",
-    "stations": [],
-    "videos": []
+    "stations": [
+      {
+        "video_url":"EsFheWkimsU",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"seOSZlVPdgM",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"GBZPzqqv_-Y",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+    ],
+    "videos": [
+      {
+        "name":"Radio Dimensione Suono",
+        "stream_url":"https://icstream.rds.radio/rds",
+        "genres":["general"]
+      },
+      {
+        "name":"Rai Radio 1",
+        "stream_url":"http://icestreaming.rai.it/1.mp3",
+        "genres":["general"]
+      },
+      {
+        "name":"Rai Radio 2",
+        "stream_url":"http://icestreaming.rai.it/2.mp3",
+        "genres":["general"]
+      },
+      {
+        "name":"RTL 102.5",
+        "stream_url":"http://shoutcast.rtl.it:3010/stream/1/;stream.mp3",
+        "genres":["general"]
+      },
+      {
+        "name":"Rai Radio 3",
+        "stream_url":"http://icestreaming.rai.it/3.mp3",
+        "genres":["general"]
+      }
+    ]
   },
   {
     "name": "Zurich",
-    "stations": [],
-    "videos": []
+    "stations": [
+      {
+        "name":"Radio SRF 3",
+        "stream_url":"http://stream.srg-ssr.ch/m/drs3/mp3_128",
+        "genres":["general"]
+      },
+      {
+        "name":"Radio SRF 1",
+        "stream_url":"http://stream.srg-ssr.ch/m/drs3/mp3_128",
+        "genres":["general"]
+      },
+      {
+        "name":"Radio Energy - Zurich",
+        "stream_url":"http://energyzuerich.ice.infomaniak.ch:80/energyzuerich-high.mp3",
+        "genres":["general"]
+      }
+    ],
+    "videos": [      
+    {
+      "video_url":"fGxbtg1ytJo",
+      "time":"MIDDAY",
+      "weather":"SUNNY"
+    },
+    {
+      "video_url":"b-WViLMs_4c",
+      "time":"MIDDAY",
+      "weather":"SUNNY"
+    },
+    {
+      "video_url":"nY5S4TuQlD8",
+      "time":"MIDDAY",
+      "weather":"SUNNY"
+    }
+  ]
   }
 ]

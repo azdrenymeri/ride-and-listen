@@ -4,7 +4,6 @@ import Youtube from 'react-youtube';
 import { useApplicationStore } from '../../../mobx/Store';
 import {observer} from 'mobx-react';
 
-
 function Video(props: any): any {
 
     const store = useApplicationStore();
@@ -26,26 +25,25 @@ function Video(props: any): any {
 
     const handleChange = (event: any) => {
       if(event.data === 1) {
-        event.target.setPlaybackQuality('hd1080')
-
+        event.target.setPlaybackQuality('highres')
       }
-      // if (event.data === 1) {
-      //   store.uiStore.videoContainerReference.classList.remove("Video-hidden")
-      // } else {
-      //   store.uiStore.videoContainerReference.classList.add("Video-hidden");
-      // }
+      if (event.data === 1) {
+        store.uiStore.videoContainerReference.classList.remove("Video-hidden")
+      } else {
+        store.uiStore.videoContainerReference.classList.add("Video-hidden");
+      }
     }
 
     const handleReady = (event: any) => {
-      event.target.setPlaybackQuality('hd1080');
+      event.target.setPlaybackQuality('highres');
       store.uiStore.videoReference = event.target;
       store.uiStore.videoContainerReference = event.target.h.parentElement; 
     }
 
     const handleQuality = (event: any) => {
       console.log('handleQuality fired!');
-      
-      event.target.setPlaybackQuality('hd1080')
+      event.target.setPlaybackQuality('highres')
+
     }
     
 
@@ -53,13 +51,12 @@ function Video(props: any): any {
       <Youtube
         opts={opts}   
         videoId={store.uiStore.selectedVideoId}
-        containerClassName="Video-container"
+        containerClassName="Video-container Video-hidden"
         className="Video-player" 
         onReady = {handleReady}
         onStateChange={handleChange}
         onError={(e) => console.log(e)}
-        onPlaybackQualityChange={(e) => handleQuality(e) }  />
-      );
+        onPlaybackQualityChange={(e) => handleQuality(e) }  />);
 }
 
 export default observer(Video);

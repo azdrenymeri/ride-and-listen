@@ -47,7 +47,8 @@ export const handleStationChange = (
     return;
   }
   let pos = store.uiStore.radioChannelPosition;
-
+  console.log(`Pos: ${pos}`);
+  
   navigation === navigate.NEXT ? pos += 1 : pos -= 1;
   
 
@@ -59,7 +60,7 @@ export const handleStationChange = (
     radioRef.setAttribute("src", radioObj.streamUrl);
     store.uiStore.selectedRadio = radioObj.name;
     radioRef.play().then().catch((err) => {});
-
+    store.uiStore.radioChannelPosition = pos;
   } else if (pos < 0) {
     
     radioObj = stationArr[0];
@@ -68,7 +69,7 @@ export const handleStationChange = (
     radioRef.setAttribute("src", radioObj.streamUrl);
     store.uiStore.selectedRadio = radioObj.name;
     radioRef.play().then().catch((err) => {});
-
+    store.uiStore.radioChannelPosition = pos;
   } else {
     // means out of array bounds
     radioObj = stationArr[stationArr.length-1];
@@ -77,8 +78,8 @@ export const handleStationChange = (
     radioRef.setAttribute("src", radioObj.streamUrl);
     store.uiStore.selectedRadio = radioObj.name;
     radioRef.play().then().catch((err) => {});
-
+    // store.uiStore.radioChannelPosition = pos;
   }
   // finally update the state on mobx for the current position
-  store.uiStore.radioChannelPosition = pos;
+  
 };

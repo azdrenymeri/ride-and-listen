@@ -30,7 +30,7 @@ function Video(props: any): any {
       if (event.data === 1) {
         store.uiStore.videoContainerReference.classList.remove("Video-hidden")
       } else {
-        store.uiStore.videoContainerReference.classList.add("Video-hidden");
+        store.uiStore.videoContainerReference.classList.add("Video-show");
       }
     }
 

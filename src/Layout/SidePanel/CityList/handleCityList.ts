@@ -3,6 +3,7 @@ import { handleVideoChange } from "../Video/handleVideo";
 
 export function handleCityClick(e: any, store: any) {
   if (store.uiStore.selectedCity === e.target.innerText.trim()){
+    handleVideoChange(e, store.uiStore.videoReference, store);
     return;
   }
   store.uiStore.selectedCity = e.target.innerText.trim();

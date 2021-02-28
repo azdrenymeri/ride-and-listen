@@ -137,7 +137,34 @@
         "genres":["hip-hop"]
       }
     ],
-    "videos": []
+    "videos": [
+      {
+        "video_url":"PGMu_Z89Ao8",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"sp1oRyurbfM",
+        "time":"MIDDAY",
+        "weather":"RAINY"
+      },
+      {
+        "video_url":"cJIs6tb3cgg",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"AIqlkQlIzCY",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      }
+
+    ]
   },
   {
     "name": "Miami",
@@ -279,23 +306,6 @@
     "name": "Roma",
     "stations": [
       {
-        "video_url":"EsFheWkimsU",
-        "time":"MIDDAY",
-        "weather":"SUNNY"
-      },
-      {
-        "video_url":"seOSZlVPdgM",
-        "time":"MIDDAY",
-        "weather":"SUNNY"
-      },
-      {
-        "video_url":"GBZPzqqv_-Y",
-        "time":"MIDDAY",
-        "weather":"SUNNY"
-      }
-    ],
-    "videos": [
-      {
         "name":"Radio Dimensione Suono",
         "stream_url":"https://icstream.rds.radio/rds",
         "genres":["general"]
@@ -319,6 +329,23 @@
         "name":"Rai Radio 3",
         "stream_url":"http://icestreaming.rai.it/3.mp3",
         "genres":["general"]
+      }
+    ],
+    "videos": [
+      {
+        "video_url":"EsFheWkimsU",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"seOSZlVPdgM",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
+      },
+      {
+        "video_url":"GBZPzqqv_-Y",
+        "time":"MIDDAY",
+        "weather":"SUNNY"
       }
     ]
   },

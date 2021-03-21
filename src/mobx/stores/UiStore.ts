@@ -16,7 +16,7 @@ export default class UiStore {
   radioChannelPosition: number;
   audioReference: HTMLAudioElement | null;
   videoReference: HTMLIFrameElement | null;
-
+  showYoutubeIframe: boolean;
 
   constructor(rootStore: RootStore) {
     makeAutoObservable(this);
@@ -27,5 +27,6 @@ export default class UiStore {
     this.audioReference = null;
     this.videoReference = null;
     this.selectedVideoId = 'sRE5iQCdRvE';
+    this.showYoutubeIframe = true;
   }
 }

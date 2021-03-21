@@ -1,6 +1,6 @@
 import React from 'react';
 import './Layout.css';
-import { useObserver, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 import { useApplicationStore } from './../mobx/Store';
 import { initialCitiesList } from '../utils/loadInitialData';
 

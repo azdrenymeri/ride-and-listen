@@ -1,6 +1,8 @@
 import CityStore from './CityStore';
 import RadioStore from './RadioStore';
 import UiStore from './UiStore';
+import {configure} from 'mobx'
+
 
 export default class RootStore {
   cityStore: CityStore;
@@ -9,6 +11,7 @@ export default class RootStore {
   videoPlayer = null;
   
   constructor() {
+    configure({enforceActions: 'never'})
     this.cityStore = new CityStore(this);
     this.radioStore = new RadioStore(this);
     this.uiStore = new UiStore(this);

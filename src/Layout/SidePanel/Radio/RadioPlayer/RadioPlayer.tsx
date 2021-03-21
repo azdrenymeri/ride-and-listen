@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { useApplicationStore } from '../../../../mobx/Store';
 import { icons } from './iconImports';
 import './RadioPlayer.css';
+import isDevelopment from './../../../../utils/mode';
 
 import { handleVolumeDown, handleTogglePlayPause, 
          handleVolumeUp, handleStationChange, 
@@ -15,7 +16,7 @@ function RadioPlayer() {
   useEffect(() => {
     store.uiStore.audioReference = playerRef.current;
 
-    if (playerRef.current?.isConnected) {
+    if (playerRef.current?.isConnected && !isDevelopment()) {
       //  chrome does not support autoplay
       //  and will throw an error if not handled
       playerRef.current.play().then().catch((e) => {})

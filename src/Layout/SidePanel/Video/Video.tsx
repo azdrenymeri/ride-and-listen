@@ -44,17 +44,24 @@ function Video(props: any): any {
       event.target.setPlaybackQuality('highres')
     }
     
+    const videoIframe = () => {
+      if (store.uiStore.showYoutubeIframe){
+        return (
+          <Youtube
+          opts={opts}   
+          videoId={store.uiStore.selectedVideoId}
+          containerClassName="Video-container"
+          className="Video-player" 
+          onReady = {handleReady}
+          onStateChange={handleChange}
+          onError={(e) => console.log(e)}
+          onPlaybackQualityChange={(e) => handleQuality(e) }  />)
+      } else {
+        return null;
+      }
+    }
 
-    return (
-      <Youtube
-        opts={opts}   
-        videoId={store.uiStore.selectedVideoId}
-        containerClassName="Video-container Video-hidden"
-        className="Video-player" 
-        onReady = {handleReady}
-        onStateChange={handleChange}
-        onError={(e) => console.log(e)}
-        onPlaybackQualityChange={(e) => handleQuality(e) }  />);
+    return videoIframe();
 }
 
 export default observer(Video);

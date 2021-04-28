@@ -2,7 +2,7 @@ import React from 'react';
 import './Video.css'
 import Youtube from 'react-youtube';
 import { useApplicationStore } from '../../../mobx/Store';
-import {observer} from 'mobx-react';
+import { observer } from 'mobx-react';
 
 function Video(props: any): any {
 
@@ -38,30 +38,24 @@ function Video(props: any): any {
       event.target.setPlaybackQuality('highres');
       store.uiStore.videoReference = event.target;
       store.uiStore.videoContainerReference = event.target.h.parentElement; 
+      console.log('Video Ready');
     }
 
     const handleQuality = (event: any) => {
       event.target.setPlaybackQuality('highres')
     }
     
-    const videoIframe = () => {
-      if (store.uiStore.showYoutubeIframe){
-        return (
-          <Youtube
-          opts={opts}   
-          videoId={store.uiStore.selectedVideoId}
-          containerClassName="Video-container"
-          className="Video-player" 
-          onReady = {handleReady}
-          onStateChange={handleChange}
-          onError={(e) => console.log(e)}
-          onPlaybackQualityChange={(e) => handleQuality(e) }  />)
-      } else {
-        return null;
-      }
-    }
-
-    return videoIframe();
+    return (
+      <Youtube
+      opts={opts}   
+      videoId={store.uiStore.selectedVideoId}
+      containerClassName="Video-container Video-show"
+      className="Video-player" 
+      onReady = {handleReady}
+      onStateChange={handleChange}
+      onError={(e) => console.log(e)}
+      onPlaybackQualityChange={(e) => handleQuality(e) }  />
+    );
 }
 
 export default observer(Video);

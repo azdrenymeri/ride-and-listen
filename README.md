@@ -1,5 +1,5 @@
 # Walk and listen
-Inspired by [Walk And Liste](https://driveandlisten.herokuapp.com/)
+Inspired by [Drive and Listen](https://driveandlisten.herokuapp.com/)
 
 Listen to worldwide radios.
 
